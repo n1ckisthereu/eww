@@ -1,0 +1,19 @@
+(defwidget bar []
+    (box :class "bar-widget" :orientation "h" :space-evenly true
+        (box :orientation "h" :space-evenly false :halign "start"
+          (logo)
+          (workspaces)
+        )
+
+        (box :orientation "h" :space-evenly false :halign "center"
+          (activewindow)
+        )
+
+        (box :orientation "h" :space-evenly false :halign "end"
+          (systray :class "systray" :pack-direction "rtl" :icon-size 20)
+          ; (tray_button)
+          (indicator) 
+          (clock)
+        )
+    )
+)

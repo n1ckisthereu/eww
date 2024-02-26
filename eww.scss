@@ -1,0 +1,43 @@
+// Colors ====================
+//@import "./styles/colors.scss";
+@import "/home/nick/.cache/wal/colors.scss";
+
+@import "./styles/global.scss";
+
+@import "./styles/lib.scss";
+@import "./styles/bar.scss";
+@import "./styles/active-window.scss";
+@import "./styles/logo.scss";
+@import "./styles/launcher.scss";
+@import "./styles/workspaces.scss";
+
+// Notifications
+@import "./styles/notifications.scss";
+@import "./styles/notification_popup.scss";
+
+// Systray
+@import "./styles/systray.scss";
+
+// Indicators
+@import "./styles/indicator.scss";
+
+// Clock
+@import "./styles/clock.scss";
+
+// Control Center
+@import "./styles/control_center.scss";
+
+// Control Center - Music
+@import "./styles/music.scss";
+
+// Control Center - User
+@import "./styles/user.scss";
+
+// Control Center - Quick Settings
+@import "./styles/quick_settings.scss";
+
+// Volume OSD
+@import "./styles/volume.scss";
+
+// Power menu
+@import "./styles/powermenu.scss";

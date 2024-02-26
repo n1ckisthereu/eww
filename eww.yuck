@@ -1,0 +1,41 @@
+; Vars
+(include "./variables.yuck")
+
+; Windows
+(include "./windows.yuck")
+
+; Bar
+(include "./modules/bar.yuck")
+
+; Modules
+(include "./modules/active-window.yuck")
+(include "./modules/logo.yuck")
+(include "./modules/launcher.yuck")
+(include "./modules/workspace.yuck")
+
+; (include "./modules/tray.yuck")
+
+(include "./modules/notifications_popup.yuck")
+(include "./modules/notification.yuck")
+
+; Indicators
+(include "./modules/clock.yuck" )
+(include "./modules/indicator.yuck")
+
+; Control Center
+(include "./modules/control_center.yuck")
+
+; Control Center - Music
+(include "./modules/music.yuck")
+
+; Control Center - User
+(include "./modules/user.yuck")
+
+; Control Center - Quick Settings
+(include "./modules/quick_settings.yuck")
+
+; Control Center - Volume Control control_center
+(include "./modules/volume.yuck")
+
+; Power Menu
+(include "./modules/powermenu.yuck")

@@ -1,0 +1,90 @@
+.username {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+// .uptime {
+//   color: $foreground;
+//   font-size: 1rem;
+// }
+
+.user-image {
+  background-image: url("https://lh5.googleusercontent.com/proxy/nRG0JIACVB_yr7UBu2Mi0aloEkI6OPJrzXURwr3LMyOHo6-VD4dIhMOZ79Au8m9cWg4L0ugTeEOUIuveGIsHGjC1Zw7kwUc736wdEHpfirIr_bwx_1w01QJYPgcQzlaApl2aeV-TWWAk");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 3rem;
+  min-width: 3rem;
+  border-radius: 5px;
+  box-shadow: $box-shadow;
+}
+
+.open-powermenu-button {
+  background-color: mix($background, $foreground, 70%);
+  color: $foreground;
+  border-radius: 5px;
+  margin: 0.35rem 0;
+  margin-left: 0.6rem;
+  transition: 0.2s;
+  font-size: 1rem;
+  min-width: 2.5rem;
+}
+
+.open-powermenu-button label {
+  font-family: $icon-font;
+  font-size: 1.4rem;
+}
+
+.open-powermenu-button:hover {
+  background-color: $color2;
+}
+
+// .user-clock-time {
+//   font-size: 1.1rem;
+//   font-family: "Noto Sans", sans-serif;
+// }
+//
+// .user-clock-separator {
+//   font-size: 1.2rem;
+//   margin: 0 0.25rem;
+// }
+//
+// .user-clock-date {
+//   font-size: 1.1rem;
+//   font-family: "Noto Sans", sans-serif;
+// }
+
+.open-settings-button {
+  background-color: mix($background, $foreground, 70%);
+  color: $foreground;
+  border-radius: 5px;
+  margin: 0.35rem 0;
+  margin-left: 0.4rem;
+  transition: 0.2s;
+  font-size: 1rem;
+  min-width: 2.5rem;
+}
+
+.open-settings-button label {
+  font-family: $icon-font;
+  font-size: 1.4rem;
+}
+
+.open-settings-button:hover {
+  background-color: $color2;
+}
+
+.user-button {
+  background-color: mix($background, $color2, 75%);
+  color: $foreground;
+  border-radius: 5px;
+  margin: 0.35rem 0;
+  margin-left: 0.4rem;
+  transition: background 0.2s;
+  font-size: 1rem;
+  min-width: 2.5rem;
+}
+
+.user-button:hover {
+  background-color: mix($background, $color2, 30%);
+}

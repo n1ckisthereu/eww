@@ -1,0 +1,29 @@
+.indicator {
+  background-color: rgba($background, 0.3);
+  //background-color: $color2;
+  border-radius: $default-border-radius;
+  padding: $padding-block;
+  box-shadow: $box-shadow;
+  transition: background 0.2s ease-out;
+  font-size: 13px;
+  margin-right: 10px;
+
+  label {
+    font-size: $icon-size;
+    font-family: $icon-font;
+  }
+
+  &:hover {
+    background-color: rgba($color2, $alpha: 0.5);
+    transition: background 0.2s ease-out;
+  }
+}
+
+.indicator-icon {
+  margin: 0px 3px 0px 3px;
+  color: $foreground;
+}
+
+.control-active {
+  background-color: rgba($color2, $alpha: 0.5);
+}

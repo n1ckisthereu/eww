@@ -1,0 +1,59 @@
+;Global 
+(defvar ANIM_DURATION "200ms")
+
+; Launcher
+(defvar open_launcher false)
+
+; Control Center
+(defvar open_control_center false)
+
+(deflisten apps :initial "{}" 
+"scripts/apps.py")
+
+; Open OSD
+(defvar open_osd false)
+
+; Dark Theme
+(defvar dark_theme true)
+
+;Monitor Width
+(defvar monitor_width "1920px")
+
+; Tray
+;(defvar open_tray false)
+
+; Workspaces
+(deflisten workspaces :initial "{}" "~/.config/eww/scripts/workspaces.sh")
+
+
+; Notifications ================================================
+
+; Notifications widget
+(deflisten notifications :initial '{"count": 0, "notifications": [], "popups": []}'
+"scripts/notifications.sh current")
+
+; Indicators ================================================
+
+; Indicator - network
+(deflisten network :initial '{"essid": "lo", "signal": ""}'
+"scripts/network.sh")
+
+; Indicator - Volume
+(deflisten volume :initial "0"
+"scripts/volume.sh")
+
+; Indicator - Do Not do-not-disturb
+(deflisten do-not-disturb :initial false
+"scripts/notifications.sh getdnd")
+
+
+; Indicator - Mpris 
+(deflisten mpris :initial "{}"
+"scripts/mpris.sh")
+
+(deflisten mpris_positions :initial "{}"
+"scripts/positions.sh")
+
+; Indicator - Recording
+(defpoll recording :interval "1s"
+"pgrep 'wf-recorder' || echo false")

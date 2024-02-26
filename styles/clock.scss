@@ -1,0 +1,19 @@
+.clock_box {
+  background-color: rgba($background, 0.3);
+  //background-color: $color2;
+  border-radius: $default-border-radius;
+  padding: $padding-block;
+  box-shadow: $box-shadow;
+  transition: background 0.2s ease-out;
+  font-size: 13px;
+
+  &:hover {
+    background-color: rgba($color2, $alpha: 0.5);
+    transition: background 0.2s ease-out;
+  }
+}
+
+.clock {
+  font-family: $default-font;
+  color: $foreground;
+}

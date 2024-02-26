@@ -1,0 +1,25 @@
+.logo {
+  background-color: rgba($color2, 0.4);
+  min-width: 15px;
+  border-radius: 1rem;
+  padding: 0px 4px 0px 4px;
+  color: $foreground;
+  border: 2px solid $color2;
+  box-shadow: $box-shadow;
+
+  margin-right: $block-distance;
+  transition: background 0.2s;
+
+  label {
+    font-size: 18px;
+    font-family: $icon-font;
+  }
+
+  &:hover {
+    background: $color2;
+  }
+}
+
+.logo-active {
+  background: $color2;
+}

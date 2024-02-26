@@ -1,0 +1,51 @@
+.launcher-box {
+  @include window;
+  border: 2px solid $color12;
+}
+
+.image-app {
+  min-width: 38px;
+}
+
+.launcher-scroll {
+  min-height: 25rem;
+  min-width: 25rem;
+  margin-top: 1rem;
+}
+
+.launcher-item {
+  color: $color2;
+  padding: 0.15rem;
+  border-radius: 5px;
+  transition: 0.3s;
+  min-height: 38px;
+}
+
+.launcher-item:hover {
+  background-color: mix($background, $color2, 70%);
+}
+
+.launcher-search {
+  background-color: $background;
+  border-radius: 5px;
+  padding: 0.75rem;
+}
+
+.launcher-search-icon {
+  font-size: 1rem;
+}
+
+.launcher-search-input {
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.launcher-app-label {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.launcher-category {
+  font-size: 1.2rem;
+  margin: 15px 0px 15px 0px;
+}

@@ -1,0 +1,8 @@
+.notifications-popup-body {
+  @include window;
+  margin-bottom: 20px;
+  min-width: 30rem;
+  background-color: rgba($background, 0.6);
+  color: $foreground;
+  padding: 0rem;
+}

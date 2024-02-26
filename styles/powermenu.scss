@@ -1,0 +1,32 @@
+.powermenu-box {
+  @include window;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.powermenu-entry {
+  margin: 0 0.5rem;
+}
+
+.powermenu-button {
+  background-color: $background;
+  border-radius: $default-border-radius;
+  transition: 0.3s;
+  padding: 3.25rem 4rem;
+}
+
+.powermenu-button:hover {
+  background-color: mix($color9, $color2, 80%);
+}
+
+.powermenu-icon {
+  font-size: 4rem;
+  font-family: $icon-font;
+}
+
+.powermenu-text {
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+}

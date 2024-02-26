@@ -1,0 +1,41 @@
+@keyframes fadeout {
+  0% {
+    background-color: $color13;
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+.workspaces {
+  margin: 0px 20px 0px 0px;
+  background-color: $color2;
+  border-radius: $default-border-radius;
+  padding: 0px 10px 0px 10px;
+  box-shadow: $box-shadow;
+}
+
+.workspace {
+  padding: 0px 6px 0px 6px;
+  margin: 5px 2px 5px 2px;
+  border: 2px solid $foreground;
+  border-radius: 100%;
+  background-color: transparent;
+}
+
+.workspace.active {
+  border-radius: 5px;
+  background-color: $color9;
+  border: 2px solid $foreground;
+}
+
+.workspace.busy {
+  background-color: transparent;
+  border: 2px solid $color12;
+  border-radius: 5px;
+}
+
+.workspace.urgent {
+  animation: fadeout 800ms infinite;
+}

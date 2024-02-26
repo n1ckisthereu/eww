@@ -1,0 +1,12 @@
+(defwidget workspaces []
+    (eventbox :cursor "pointer" :onscroll ""
+        (box :orientation "h" :space-evenly false :class "workspaces"
+          (for workspace in workspaces
+            (button 
+              :class "workspace ${workspace.active == 1 ? "active" : "" } ${workspace.busy == 1 ? "busy" : ""} ${workspace.urgent == 1 ? "urgent" : ""}" 
+              :onclick "hyprctl dispatch workspace ${workspace.id}"
+            )
+          )      
+        )
+    )
+)

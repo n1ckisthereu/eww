@@ -1,0 +1,20 @@
+; (defwidget activewindow []
+;   (box :class "active-window"
+;     (label :text xtitle :class "wintitle")
+;   )
+; )
+;
+
+
+; (defwidget activewindow []
+;     (box :class "active-window" 
+;       (label :text actwindow :class "wintitle")
+;     )
+; )
+
+
+(deflisten actwindow "/home/nick/.config/eww/scripts/active-window.sh")
+
+(defwidget activewindow []
+      (literal :content actwindow :valign "center") 
+)

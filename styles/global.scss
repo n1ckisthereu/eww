@@ -1,0 +1,38 @@
+// Sizes patterns
+
+$container-min-height: 1.75rem;
+$bar-min-height: 1.75rem;
+
+$default-font: "CartographCF Nerd font";
+$alternative-font: "CaskaydiaMono Nerd Font";
+$icon-font: "Hack Nerd Font Mono";
+$noto-sans: "Noto Sans";
+
+$default-border-radius: 0.3125rem;
+
+$box-shadow: 0px 0.1875rem 0.1875rem rgba(#000, 0.3);
+
+$block-distance: 1.25rem;
+
+$padding-block: 0 0.6rem 0rem 0.6rem;
+
+$default-indicator-spacing: 0.0625rem;
+
+$widget-min-width: 28rem;
+
+$icon-size: 1.4rem;
+
+* {
+  all: unset;
+  font-family: "Noto Sans";
+}
+
+.is-icon {
+  font-family: $icon-font;
+  font-size: 1.5rem;
+}
+
+.is-icon-label label {
+  font-family: $icon-font;
+  font-size: 1.5rem;
+}
