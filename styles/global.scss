@@ -5,7 +5,7 @@ $bar-min-height: 1.75rem;
 
 $default-font: "CartographCF Nerd font";
 $alternative-font: "CaskaydiaMono Nerd Font";
-$icon-font: "Hack Nerd Font Mono";
+$icon-font: "Symbols Nerd Font Mono";
 $noto-sans: "Noto Sans";
 
 $default-border-radius: 0.3125rem;
@@ -20,7 +20,7 @@ $default-indicator-spacing: 0.0625rem;
 
 $widget-min-width: 28rem;
 
-$icon-size: 1.4rem;
+$icon-size: 0.9rem;
 
 * {
   all: unset;
@@ -28,11 +28,11 @@ $icon-size: 1.4rem;
 }
 
 .is-icon {
+  font-size: $icon-size;
   font-family: $icon-font;
-  font-size: 1.5rem;
 }
 
 .is-icon-label label {
+  font-size: $icon-size;
   font-family: $icon-font;
-  font-size: 1.5rem;
 }

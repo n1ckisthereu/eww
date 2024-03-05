@@ -7,11 +7,10 @@
   border: 2px solid $color2;
   box-shadow: $box-shadow;
 
-  margin-right: $block-distance;
   transition: background 0.2s;
 
   label {
-    font-size: 18px;
+    font-size: 0.9rem;
     font-family: $icon-font;
   }
 
