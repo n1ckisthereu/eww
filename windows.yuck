@@ -73,7 +73,6 @@
 
 (defwindow control_center
     :monitor 0
-    :focusable false
     :stacking "overlay"
     :geometry (geometry
                     :anchor "top right"
@@ -82,6 +81,19 @@
                 )
     :namespace "eww-blur"
     (control_center)
+)
+
+(defwindow calendar_indicator
+    :monitor 0
+    :stacking "overlay"
+    :geometry (geometry 
+                    :anchor "top right"
+                    :width "2px"
+                    :height "2px")
+    :namespace "eww-blur"
+    :focusable false 
+    (calendar_indicator)
+
 )
 
 (defwindow powermenu
@@ -93,5 +105,4 @@
                     :height "120%")
     :namespace "eww-blur"
     (powermenu)
-
 )

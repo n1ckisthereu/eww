@@ -10,6 +10,9 @@
 (deflisten apps :initial "{}" 
 "scripts/apps.py")
 
+; Calendar
+(defvar open_calendar false)
+
 ; Open OSD
 (defvar open_osd false)
 
