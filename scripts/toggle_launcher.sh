@@ -2,18 +2,20 @@
 
 state=$(eww get open_launcher)
 
+eww open launcher --toggle
+
 open_launcher() {
-	if [[ -z $(eww active-windows| grep '*launcher') ]]; then
-		eww open launcher
-	fi
+	# if [[ -z $(eww active-windows | grep '*launcher') ]]; then
+	# 	eww open launcher
+	# fi
 	eww update open_launcher=true
-	sleep 0.5 && /home/nick/.config/eww/scripts/apps.py &
+	sleep 0.5 && scripts/apps.py &
 }
 
 close_launcher() {
-	eww close launcher
+	# eww close launcher
 	eww update open_launcher=false
-	/home/nick/.config/eww/scripts/apps.py &
+	scripts/apps.py &
 }
 
 case $1 in

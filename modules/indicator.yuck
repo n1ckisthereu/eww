@@ -1,8 +1,8 @@
 (defwidget indicator []
     (button :onclick "scripts/toggle_control_center.sh" :class "indicator ${open_control_center == true ? "control-active " : ""}"
-    ;(button :class "indicator"
         (box :orientation "h" :space-evenly false
           (network_icon)
+          (wired_network)
           (volume_icon)
           (do-not-disturb_icon)
         )
@@ -14,9 +14,15 @@
 )
 
 (defwidget network_icon []
-    (state_icon :condition true
+    (state_icon :condition {is-wifi == true}
       :text {network.essid == "lo" ? "󰤭" : network.signal == "" ? "󰤩" : network.signal < 25 ? "󰤟" : network.signal < 50 ? "󰤢" : network.signal < 75 ? "󰤥" : "󰤨"}
     )
+)
+
+(defwidget wired_network []
+  (state_icon :condition {is-wifi == false}
+    :text {wired-connection.connstatus == "none" ? "󰈂" : wired-connection.connstatus == "limited" ? "󱎔" : "󰈀" }
+  )
 )
 
 (defwidget volume_icon []

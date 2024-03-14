@@ -28,18 +28,22 @@
 ; Workspaces
 (deflisten workspaces :initial "{}" "~/.config/eww/scripts/workspaces.sh")
 
-
-; Notifications ================================================
+; Window indicator
+(deflisten actwindow "scripts/active-window.sh")
 
 ; Notifications widget
 (deflisten notifications :initial '{"count": 0, "notifications": [], "popups": []}'
 "scripts/notifications.sh current")
 
-; Indicators ================================================
-
 ; Indicator - network
 (deflisten network :initial '{"essid": "lo", "signal": ""}'
-"scripts/network.sh")
+"scripts/network.sh wifi-monitor")
+
+(deflisten is-wifi :initial false
+"scripts/network.sh is-wifi")
+
+(deflisten wired-connection :initial '{"connstatus": "none"}'
+"scripts/network.sh wired-connection")
 
 ; Indicator - Volume
 (deflisten volume :initial "0"
@@ -48,7 +52,6 @@
 ; Indicator - Do Not do-not-disturb
 (deflisten do-not-disturb :initial false
 "scripts/notifications.sh getdnd")
-
 
 ; Indicator - Mpris 
 (deflisten mpris :initial "{}"
