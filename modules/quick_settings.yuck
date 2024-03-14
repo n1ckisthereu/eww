@@ -34,7 +34,8 @@
 
 (defwidget network []
     (quick_settings_button  :condition {network.essid == "lo"} 
-                            :action {network.essid == "lo" ? "XDG_CURRENT_DESKTOP='gnome' gnome-control-center wifi &" : "nmcli connection down id '${network.essid}'"}
+                            ; :action {network.essid == "lo" ? "XDG_CURRENT_DESKTOP='gnome' gnome-control-center wifi &" : "nmcli connection down id '${network.essid}'"}
+                            :action {"echo ''"}
                             :icon {network.essid == "lo" ? "󰤭" : network.signal == "" ? "󰤩" : network.signal < 25 ? "󰤟" : network.signal < 50 ? "󰤢" : network.signal < 75 ? "󰤥" : "󰤨"}
                             :label {network.essid == "lo" ? "Not connected" : network.essid}
                             :class "left-top-plite"
