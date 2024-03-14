@@ -21,7 +21,6 @@
 
 .volume-icon {
   margin-left: 0.75rem;
-  font-size: 1.5rem;
 
   &.less {
     color: $foreground;
@@ -68,12 +67,4 @@
 
 .volume-mute:hover {
   background-color: mix($color2, $foreground, 70%);
-}
-
-// .volume-icon label {
-//   font-family: $icon-font;
-// }
-//
-.volume-mute label {
-  font-family: $icon-font;
 }

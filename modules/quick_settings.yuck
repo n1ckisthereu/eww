@@ -3,6 +3,7 @@
       (box :orientation "v" :class "quick_settings_box" :space-evenly true
           (box :orientation "h" :space-evenly true
               (network)
+              (wired_connection)
               (do-not-disturb_mode)
           )
           (box :orientation "h" :space-evenly true
@@ -13,8 +14,8 @@
     )
 )
 
-(defwidget quick_settings_button [condition action icon label class]
-    (button :onclick {action} :class {condition ? "quick_settings_button ${class}" : "quick_settings_button quick_settings_button_toggled ${class}"}
+(defwidget quick_settings_button [condition action icon label class visible]
+    (button :visible {visible} :onclick {action} :class {condition ? "quick_settings_button ${class}" : "quick_settings_button quick_settings_button_toggled ${class}"}
         (box :orientation "h" :space-evenly false
             (box :orientation "h" :space-evenly false :halign "start"
                 (label :class "quick-settings-icon" :text {icon})
@@ -33,11 +34,23 @@
 
 (defwidget network []
     (quick_settings_button  :condition {network.essid == "lo"} 
-                            :action {network.essid == "lo" ? "XDG_CURRENT_DESKTOP='gnome' gnome-control-center wifi &" : "nmcli connection down id '${network.essid}'"}
+                            ; :action {network.essid == "lo" ? "XDG_CURRENT_DESKTOP='gnome' gnome-control-center wifi &" : "nmcli connection down id '${network.essid}'"}
+                            :action {"echo ''"}
                             :icon {network.essid == "lo" ? "󰤭" : network.signal == "" ? "󰤩" : network.signal < 25 ? "󰤟" : network.signal < 50 ? "󰤢" : network.signal < 75 ? "󰤥" : "󰤨"}
                             :label {network.essid == "lo" ? "Not connected" : network.essid}
                             :class "left-top-plite"
-    )
+                            :visible {is-wifi} 
+      )
+)
+
+(defwidget wired_connection []
+    (quick_settings_button  :condition {network.essid == "lo"} 
+                            :action {"echo ''"}
+                            :icon {wired-connection.connstatus == "none" ? "󰈂" : wired-connection.connstatus == "limited" ? "󱎔" : "󰈀"}
+                            :label {network.essid == "lo" ? "Not connected" : network.essid}
+                            :class "left-top-plite"
+                            :visible {is-wifi == false} 
+      )
 )
 
 (defwidget do-not-disturb_mode []
@@ -46,6 +59,7 @@
                             :icon "󰍷"
                             :label "Don't disturb"
                             :class "right-top-plite"
+                            :visible true
     )
 )
 
@@ -55,6 +69,7 @@
                             :icon "󰔎"
                             :label "Dark theme" 
                             :class "left-bottom-plite"
+                            :visible true
     )
 )
 
@@ -64,6 +79,7 @@
                             :icon {network.essid == "lo" ? "󰤭" : network.signal == "" ? "󰤩" : network.signal < 25 ? "󰤟" : network.signal < 50 ? "󰤢" : network.signal < 75 ? "󰤥" : "󰤨"}
                             :label {network.essid == "lo" ? "Not connected" : network.essid}
                             :class "right-bottom-plite"
+                            :visible true
     )
 )
 

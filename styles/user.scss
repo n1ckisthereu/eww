@@ -32,7 +32,7 @@
 
 .open-powermenu-button label {
   font-family: $icon-font;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
 .open-powermenu-button:hover {
@@ -65,13 +65,13 @@
   min-width: 2.5rem;
 }
 
-.open-settings-button label {
-  font-family: $icon-font;
-  font-size: 1.4rem;
-}
-
 .open-settings-button:hover {
   background-color: $color2;
+}
+
+.open-settings-button label {
+  font-family: $icon-font;
+  font-size: 1rem;
 }
 
 .user-button {

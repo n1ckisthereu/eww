@@ -13,7 +13,6 @@
 ; )
 
 
-(deflisten actwindow "/home/nick/.config/eww/scripts/active-window.sh")
 
 (defwidget activewindow []
       (literal :content actwindow :valign "center") 

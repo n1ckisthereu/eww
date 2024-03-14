@@ -39,3 +39,6 @@
 
 ; Power Menu
 (include "./modules/powermenu.yuck")
+
+; Calendar
+(include "./modules/calendar_indicator.yuck")

@@ -1,8 +1,22 @@
 (defwidget logo []
     (eventbox
-      :cursor "pointer"
         (button :class "logo ${open_launcher == true ? "logo-active" : ""}" :onclick "./scripts/toggle_launcher.sh"
-          (label :text "󱓞")
+          ; (label :text "󱓞")
+          ; (label :text "")
+          ; (label :text "󰥺")
+          ; (label :text "󰌽")
+          ; (label :text "")
+          ; (label :text "󰍈")
+          ; (label :text "")
+          ; (label :text "󱑻")
+          ; (label :text "󱑼")
+          ; (label :text "󰆚")
+          ; (label :text "")
+          ; (label :text "󰄛")
+          ; (label :text "󰩃")
+          ; (label :text "󱣻")
+          ; (label :text "󰧲")
+          (label :text "")
         )
     )
 )

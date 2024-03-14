@@ -1,13 +1,11 @@
 .bar {
-  background-color: rgba($background, 0.6);
-  border-radius: 5px;
-  border: 2px solid $color2;
+  all: unset;
+  min-height: 26px;
+  margin-bottom: 4px;
 }
 
 .bar-widget {
-  all: unset;
+  background-color: rgba($background, 0.6);
   padding: 0.5rem 1rem;
-  min-height: 26px;
-  background: none;
-  border: none;
+  box-shadow: 0px 2px 2px 0px rgba(black, 0.3);
 }

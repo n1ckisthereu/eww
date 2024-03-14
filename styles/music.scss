@@ -1,6 +1,6 @@
 .music {
   @include window;
-  border: 2px solid $color2;
+  //  border: 2px solid $color2;
 }
 
 .music-image {
@@ -9,7 +9,6 @@
   background-position: center;
   min-height: 6rem;
   min-width: 6rem;
-  border-radius: $default-border-radius;
 }
 
 .music-text {

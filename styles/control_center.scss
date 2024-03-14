@@ -1,5 +1,4 @@
 .control-center {
   @include window;
-  border: 2px solid $color2;
   min-width: $widget-min-width;
 }

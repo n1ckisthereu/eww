@@ -1,5 +1,5 @@
 (defwidget clock []
-  (button :onclick "" :class "clock_box"
+  (button :onclick "scripts/toggle_calendar.sh" :class "clock_box"
     (label :class "clock" :text {formattime(EWW_TIME, "%H:%M")})
   )
 )

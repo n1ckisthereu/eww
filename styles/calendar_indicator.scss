@@ -1,0 +1,53 @@
+.calendar-box {
+  font-weight: Bold;
+  font-size: 0.9rem;
+  background-color: rgba($background, 0.6);
+  border-radius: $default-border-radius;
+  padding: 0 1rem 0.2rem;
+  color: $foreground;
+  margin: 0.6rem 0.6rem 0.6rem 0.6rem;
+  box-shadow: 0 0 4px 2px rgba(#000000, 0.3);
+
+  .calendar-indicator {
+    background-color: transparent;
+    padding: 0.5rem 0.15rem 0.2rem;
+    margin-left: 10px;
+
+    & > * {
+      border: solid 0px transparent;
+    }
+
+    &.highlight {
+      padding: 10rem;
+    }
+  }
+  .clock-calendar {
+    margin-top: 1rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+    font-family: $alternative-font;
+  }
+}
+
+calendar:selected {
+  color: $color2;
+}
+
+calendar.header {
+  color: mix($background, $foreground, 50%);
+
+  font-weight: bold;
+}
+
+calendar.button {
+  color: $foreground;
+}
+
+calendar.highlight {
+  color: mix($color2, $foreground, 70%);
+  font-weight: bold;
+}
+
+calendar:indeterminate {
+  color: mix($background, $foreground, 40%);
+}

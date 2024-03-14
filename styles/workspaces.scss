@@ -9,7 +9,7 @@
 }
 
 .workspaces {
-  margin: 0px 20px 0px 0px;
+  margin: 0px $block-distance 0px $block-distance;
   background-color: $color2;
   border-radius: $default-border-radius;
   padding: 0px 10px 0px 10px;
@@ -26,7 +26,7 @@
 
 .workspace.active {
   border-radius: 5px;
-  background-color: $color9;
+  background-color: mix($color2, $foreground, 80%);
   border: 2px solid $foreground;
 }
 
