@@ -5,7 +5,12 @@
 }
 
 .bar-widget {
-  background-color: rgba($background, 0.6);
+  @if $background == #000000 {
+    background-color: rgba(mix($background, $foreground, 83%), 0.6);
+  } @else {
+    background-color: rgba($background, 0.6);
+  }
+
   padding: 0.5rem 1rem;
   box-shadow: 0px 2px 2px 0px rgba(black, 0.3);
 }

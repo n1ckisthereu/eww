@@ -1,5 +1,9 @@
 @mixin window {
-  background-color: rgba($background, 0.6);
+  @if $background == #000000 {
+    background-color: rgba(mix($background, $foreground, 83%), 0.6);
+  } @else {
+    background-color: rgba($background, 0.6);
+  }
   border-radius: 5px;
   padding: 1rem;
   color: $foreground;

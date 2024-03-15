@@ -32,7 +32,8 @@
 
 .workspace.busy {
   background-color: transparent;
-  border: 2px solid $color12;
+  border: 2px solid mix($color2, $foreground, 40%);
+  // border: 2px solid $color12;
   border-radius: 5px;
 }
 

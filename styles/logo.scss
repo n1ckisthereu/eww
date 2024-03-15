@@ -1,7 +1,7 @@
 .logo {
   background-color: rgba($color2, 0.4);
   min-width: 15px;
-  border-radius: 1rem;
+  border-radius: $default-border-radius;
   padding: 0px 4px 0px 4px;
   color: $foreground;
   border: 2px solid $color2;
