@@ -7,8 +7,8 @@
               (do-not-disturb_mode)
           )
           (box :orientation "h" :space-evenly true
-              (toggle-dark)
-              (box)
+              ; (toggle-dark)
+              ; (box)
           )
       )
     )
@@ -64,17 +64,17 @@
 )
 
 (defwidget toggle-dark []
-    (quick_settings_button  :condition {dark_theme == false} 
-                            :action "scripts" 
+    (quick_settings_button  :condition {dark_theme == false}
+                            :action "scripts"
                             :icon "󰔎"
-                            :label "Dark theme" 
+                            :label "Dark theme"
                             :class "left-bottom-plite"
-                            :visible true
+                            :visible false
     )
 )
 
 (defwidget network3 []
-    (quick_settings_button  :condition {network.essid == "lo"} 
+    (quick_settings_button  :condition {network.essid == "lo"}
                             :action {network.essid == "lo" ? "XDG_CURRENT_DESKTOP='gnome' gnome-control-center wifi &" : "nmcli connection down id '${network.essid}'"}
                             :icon {network.essid == "lo" ? "󰤭" : network.signal == "" ? "󰤩" : network.signal < 25 ? "󰤟" : network.signal < 50 ? "󰤢" : network.signal < 75 ? "󰤥" : "󰤨"}
                             :label {network.essid == "lo" ? "Not connected" : network.essid}
@@ -84,7 +84,7 @@
 )
 
 ; (defwidget recorder []
-;     (quick_settings_button  :condition {recording == false} 
+;     (quick_settings_button  :condition {recording == false}
 ;                             :action {recording == false ? "eww open recorder_menu" : "pkill -INT wf-recorder && notify-send 'Recording saved'"}
 ;                             :icon "󰻃"
 ;                             :label "Recording"
@@ -93,7 +93,7 @@
 ; )
 ;
 ; (defwidget theme []
-;     (quick_settings_button  :condition {current_theme == "light"} 
+;     (quick_settings_button  :condition {current_theme == "light"}
 ;                             :action "scripts/material.py --toggle &"
 ;                             :icon "󱎖"
 ;                             :label "Dark mode"
