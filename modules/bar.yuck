@@ -3,15 +3,20 @@
         (box :orientation "h" :space-evenly false :halign "start"
           (logo)
           (workspaces)
-        )
+          (box :orientation "h" :space-evenly false :class "kblayout-box" :halign "start"
+            (label :text "󰌌 ${kblayout}" :class "kblayout") 
+          )
+          )
 
         (box :orientation "h" :space-evenly false :halign "center"
           (activewindow)
         )
 
         (box :orientation "h" :space-evenly false :halign "end"
-          (systray :class "systray" :pack-direction "rtl" :icon-size 20)
+          (systray :class "systray" :pack-direction "rtl" :icon-size 20 )
           ; (tray_button)
+
+          (privacy_indicators)
           (indicator) 
           (clock)
         )

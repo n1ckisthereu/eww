@@ -14,7 +14,7 @@
 }
 
 .volume-scale trough highlight {
-  background-color: $color2;
+  background-color: $color1;
   border-radius: $default-border-radius;
   min-height: 2.25rem;
 }
@@ -34,7 +34,7 @@
 }
 
 .volume-arrow {
-  color: $color2;
+  color: $color1;
   margin-left: 0.5rem;
   font-size: 2rem;
   min-width: 2.25rem;
@@ -56,15 +56,15 @@
   transition: 0.3s;
 
   &.active {
-    background-color: $color2;
+    background-color: $color1;
     color: $foreground;
   }
 
   &.active:hover {
-    background-color: mix($color2, $background, 70%);
+    background-color: mix($color1, $background, 70%);
   }
 }
 
 .volume-mute:hover {
-  background-color: mix($color2, $foreground, 70%);
+  background-color: mix($color1, $foreground, 70%);
 }

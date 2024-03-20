@@ -6,7 +6,7 @@
   transition: 200ms;
   background-color: mix($background, $foreground, 70%);
   color: $foreground;
-  border-radius: 5px;
+  border-radius: $default-border-radius;
   padding: 0.65rem;
   font-size: 1rem;
 }
@@ -16,7 +16,7 @@
 }
 
 .quick_settings_button_toggled {
-  background-color: $color2;
+  background-color: $color1;
   color: $foreground;
 }
 

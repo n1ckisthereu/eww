@@ -52,7 +52,7 @@
 }
 
 .notifications-clear-button:hover {
-  background-color: $color2; //$color2;
+  background-color: $color1; //$color1;
 }
 
 .notifications-header-text {
@@ -60,7 +60,7 @@
 }
 
 .notification-action {
-  color: $color2;
+  color: $color1;
   padding: 0 0.5rem;
   margin: 0 0.25rem;
   transition: 0.3s;
@@ -86,5 +86,5 @@
 
 .notification-close:hover {
   // background-color: mix($background, $foreground, 70%);
-  background-color: $color2;
+  background-color: $color1;
 }

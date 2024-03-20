@@ -1,0 +1,8 @@
+(defwidget privacy_indicators [] 
+  (box :class "privacy-indicators"
+    (box :orientation "h" :space-evenly false :class "indicator-box" :visible {mic-used || screen-share}
+      (label :class "micpriv-indicator-icon is-icon" :valign "center" :text "" :visible {mic-used})
+      (label :class "rec-indicator-icon is-icon" :valign "center" :text "󰑊" :visible {screen-share})
+    )
+  )
+)

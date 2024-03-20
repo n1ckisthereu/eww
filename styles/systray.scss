@@ -1,8 +1,8 @@
 .systray {
-  border-radius: 5px;
+  border-radius: $default-border-radius;
   box-shadow: $box-shadow;
-  margin-right: 10px;
   background-color: rgba($background, 0.3);
+  margin-right: 10px;
 }
 
 .systray menuitem {
@@ -11,17 +11,17 @@
 
 .systray menu {
   background-color: rgba($background, 0.8);
-  border-radius: 5px;
+  border-radius: $default-border-radius;
   padding: 8px 0 8px 0;
 }
 
 .systray menu menuitem {
   padding: 5px 20px 5px 20px;
-  border-radius: 5px;
+  border-radius: $default-border-radius;
   color: $foreground;
 
   &:hover {
-    background-color: $color2;
+    background-color: $color1;
   }
 }
 
@@ -40,7 +40,7 @@
 // }
 //
 // .tray_button:hover {
-//   background-color: $color2
+//   background-color: $color1
 // }
 //
 // tooltip {

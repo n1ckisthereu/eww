@@ -30,12 +30,11 @@
 }
 
 calendar:selected {
-  color: $color2;
+  color: $color1;
 }
 
 calendar.header {
   color: mix($background, $foreground, 50%);
-
   font-weight: bold;
 }
 
@@ -44,7 +43,7 @@ calendar.button {
 }
 
 calendar.highlight {
-  color: mix($color2, $foreground, 70%);
+  color: mix($color1, $foreground, 70%);
   font-weight: bold;
 }
 

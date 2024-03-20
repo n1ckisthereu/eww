@@ -91,8 +91,11 @@ class NotificationDaemon(dbus.service.Object):
             self.save_popup(details)
 
         if self.dnd == False:
-            sound_thread = threading.Thread(target=self.SendSound)
-            sound_thread.start()
+            not_sound_apps = ["spotify"]
+
+            if app_name.lower() not in not_sound_apps:
+                sound_thread = threading.Thread(target=self.SendSound)
+                sound_thread.start()
 
         return id
 

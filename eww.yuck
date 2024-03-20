@@ -42,3 +42,6 @@
 
 ; Calendar
 (include "./modules/calendar_indicator.yuck")
+
+; Microphone Privacy Indicator
+(include "./modules/privacy_indicators.yuck")

@@ -1,10 +1,10 @@
 .logo {
-  background-color: rgba($color2, 0.4);
+  background-color: rgba($color1, 0.4);
   min-width: 15px;
   border-radius: $default-border-radius;
   padding: 0px 4px 0px 4px;
   color: $foreground;
-  border: 2px solid $color2;
+  border: 2px solid $color1;
   box-shadow: $box-shadow;
 
   transition: background 0.2s;
@@ -15,10 +15,10 @@
   }
 
   &:hover {
-    background: $color2;
+    background: $color1;
   }
 }
 
 .logo-active {
-  background: $color2;
+  background: $color1;
 }
