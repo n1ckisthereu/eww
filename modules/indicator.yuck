@@ -1,5 +1,5 @@
 (defwidget indicator []
-    (button :onclick "scripts/toggle_control_center.sh" :class "indicator ${open_control_center == true ? "control-active " : ""}"
+    (button :onclick "scripts/toggle_control_center.sh" :class "indicator ${open_control_center == true ? "control-active" : ""}"
         (box :orientation "h" :space-evenly false
           (network_icon)
           (wired_network)

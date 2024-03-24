@@ -1,6 +1,6 @@
 .music {
   @include window;
-  //  border: 2px solid $color1;
+  //  border: 2px solid $color10;
 }
 
 .music-image {
@@ -25,7 +25,7 @@
 }
 
 .music-name {
-  background-color: $color1;
+  background-color: $color10;
   color: $foreground;
   padding: 0.25rem 0.5rem;
   border-radius: $default-border-radius;
@@ -49,7 +49,7 @@
 }
 
 .music-scale highlight {
-  background-color: $color1;
+  background-color: $color10;
   border-radius: 1rem;
   min-height: 0.5rem;
 }

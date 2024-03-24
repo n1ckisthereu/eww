@@ -30,7 +30,7 @@
 }
 
 calendar:selected {
-  color: $color1;
+  color: $color10;
 }
 
 calendar.header {
@@ -43,7 +43,7 @@ calendar.button {
 }
 
 calendar.highlight {
-  color: mix($color1, $foreground, 70%);
+  color: mix($color10, $foreground, 70%);
   font-weight: bold;
 }
 

@@ -3,16 +3,16 @@
     color: $foreground;
   }
   50% {
-    color: mix($foreground, $color1, 50%);
+    color: mix($foreground, $color10, 50%);
   }
   100% {
-    color: mix($color1, red, 50%);
+    color: mix($color10, red, 50%);
   }
 }
 
 .indicator-box {
   padding: $padding-block;
-  background-color: mix($background, $color1, 85%);
+  background-color: mix($background, $color10, 85%);
   border-radius: $default-border-radius;
   box-shadow: $box-shadow;
   color: $foreground;

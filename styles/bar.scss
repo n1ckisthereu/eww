@@ -9,15 +9,15 @@
     background-color: rgba(mix($background, $foreground, 83%), 0.6);
   } @else {
     background-color: rgba($background, 0.6);
+    // background-color: rgba(mix($background, $foreground, 86%), 0.6);
   }
 
   padding: 0.5rem 1rem;
   box-shadow: 0px 2px 2px 0px rgba(black, 0.3);
 }
 
-
 .kblayout {
-  // background-color: mix($background, $color2, 90%);
+  // background-color: mix($background, $color10, 90%);
   color: $foreground;
   border-radius: 5px;
   // margin: 0.35rem 0;

@@ -3,7 +3,7 @@
         (box :orientation "h" :space-evenly false :halign "start"
             (box :orientation "h" :space-evenly false :class "user-image")
             (button :class "open-powermenu-button" :onclick "eww open powermenu & scripts/toggle_control_center.sh close" "")
-            (button :class "open-settings-button is-icon-label" :onclick "cd ~/.config/eww & neovide . & scripts/toggle_control_center.sh" "")
+            (button :class "open-settings-button is-icon-label" :onclick "cd ~/.config/eww & neovide . --size 1x1 & scripts/toggle_control_center.sh" "")
         )
 
         (box :orientation "h" :space-evenly false :halign "end"
