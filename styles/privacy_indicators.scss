@@ -1,0 +1,28 @@
+@keyframes blink {
+  0% {
+    color: $foreground;
+  }
+  50% {
+    color: mix($foreground, $color10, 50%);
+  }
+  100% {
+    color: mix($color10, red, 50%);
+  }
+}
+
+.indicator-box {
+  padding: $padding-block;
+  background-color: mix($background, $color10, 85%);
+  border-radius: $default-border-radius;
+  box-shadow: $box-shadow;
+  color: $foreground;
+  font-family: $icon-font;
+  margin-right: 10px;
+}
+.indicator-box label {
+  margin: 0 3px 0 3px;
+}
+
+.rec-indicator-icon {
+  animation: blink 1.3s infinite alternate;
+}

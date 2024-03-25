@@ -4,28 +4,28 @@ import gi
 
 gi.require_version("GdkPixbuf", "2.0")
 gi.require_version("Gtk", "3.0")
+gi.require_version("GSound", "1.0")
 
 import dbus
 import dbus.service
 from dbus.mainloop.glib import DBusGMainLoop
-from gi.repository import GLib
 import datetime
 import os
 import typing
 import sys
 import json
-from gi.repository import Gtk, GdkPixbuf
+from gi.repository import Gtk, GdkPixbuf, GLib
 import subprocess
 from time import time
+import threading
 
 cache_dir = f"{os.getenv('HOME')}/.cache/notify_img_data"
 log_file = f"{os.getenv('HOME')}/.cache/notifications.json"
 os.makedirs(cache_dir, exist_ok=True)
 active_popups = {}
 
+
 # RECIEVE NOTIFICATIONS
-
-
 class NotificationDaemon(dbus.service.Object):
     def __init__(self):
         bus_name = dbus.service.BusName(
@@ -89,6 +89,14 @@ class NotificationDaemon(dbus.service.Object):
         self.save_notifications(details)
         if not self.dnd:
             self.save_popup(details)
+
+        if self.dnd == False:
+            not_sound_apps = ["spotify"]
+
+            if app_name.lower() not in not_sound_apps:
+                sound_thread = threading.Thread(target=self.SendSound)
+                sound_thread.start()
+
         return id
 
     def format_long_string(self, long_string, interval):
@@ -250,10 +258,22 @@ class NotificationDaemon(dbus.service.Object):
             ["eww", "update", f"notifications={json.dumps(self.read_log_file())}"]
         )
 
+    def SendSound(self):
+        home = os.environ["HOME"]
+
+        subprocess.run(
+            [
+                "ffplay",
+                f"{home}/.config/eww/assets/noti.mp3",
+                "-nodisp",
+                "-nostats",
+                "-hide_banner",
+                "-autoexit",
+            ]
+        )
+
 
 # MAINLOOP
-
-
 def main():
     DBusGMainLoop(set_as_default=True)
     loop = GLib.MainLoop()

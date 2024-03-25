@@ -13,7 +13,7 @@
 }
 
 .launcher-item {
-  color: $color2;
+  color: $foreground;
   padding: 0.15rem;
   border-radius: 5px;
   transition: 0.3s;
@@ -21,7 +21,7 @@
 }
 
 .launcher-item:hover {
-  background-color: mix($background, $color2, 70%);
+  background-color: mix($background, $color10, 70%);
 }
 
 .launcher-search {

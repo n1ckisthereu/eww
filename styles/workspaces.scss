@@ -1,6 +1,6 @@
 @keyframes fadeout {
   0% {
-    background-color: $color13;
+    background-color: mix($color10, $foreground, 60%);
   }
 
   100% {
@@ -10,7 +10,7 @@
 
 .workspaces {
   margin: 0px $block-distance 0px $block-distance;
-  background-color: $color2;
+  background-color: $color10;
   border-radius: $default-border-radius;
   padding: 0px 10px 0px 10px;
   box-shadow: $box-shadow;
@@ -26,16 +26,17 @@
 
 .workspace.active {
   border-radius: 5px;
-  background-color: mix($color2, $foreground, 80%);
+  background-color: mix($color10, $foreground, 60%);
   border: 2px solid $foreground;
 }
 
 .workspace.busy {
   background-color: transparent;
-  border: 2px solid $color12;
+  border: 2px solid mix($color10, $foreground, 40%);
+  // border: 2px solid $color102;
   border-radius: 5px;
 }
 
 .workspace.urgent {
-  animation: fadeout 800ms infinite;
+  animation: fadeout 500ms infinite alternate;
 }

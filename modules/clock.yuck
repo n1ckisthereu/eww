@@ -1,11 +1,11 @@
 (defwidget clock []
-  (button :onclick "scripts/toggle_calendar.sh" :class "clock_box"
+  (button :onclick "scripts/toggle_calendar.sh" :class "clock_box ${open_calendar == true ? 'clock-active' : '' }"
     (label :class "clock" :text {formattime(EWW_TIME, "%H:%M")})
-  )
+  ) 
 )
 
 (defwidget big_clock []
-    (box :class "big_clock_box" :orientation "h" :space-evenly false
+    (box :class "big_clock_box " :orientation "h" :space-evenly false
         (label :class "big_clock_label" :text {formattime(EWW_TIME, "%H:%M")})
     )
 )

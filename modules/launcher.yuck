@@ -36,7 +36,7 @@
                         (box :orientation "v" :space-evenly false :visible {apps.search == false ? false : true}
                             (label :class "launcher-category" :halign "start" :text "Search")
                             (for app in {apps.filtered}
-                                (eventbox :onrightclick "scripts/apps.py --add-pin ${app.name} '${app.icon}' '${app.desktop}' &"
+                                (eventbox :onrightclick "scripts/apps.py --add-pin '${app.name}' '${app.icon}' '${app.desktop}' &"
                                     (launcher_item :app app)
                                 )
                             )

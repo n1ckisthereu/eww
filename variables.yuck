@@ -53,6 +53,9 @@
 (deflisten do-not-disturb :initial false
 "scripts/notifications.sh getdnd")
 
+; Get uptime
+; (defpoll uptime :interval "60" :initial 0 "uptime -p")
+
 ; Indicator - Mpris 
 (deflisten mpris :initial "{}"
 "scripts/mpris.sh")
@@ -60,6 +63,19 @@
 (deflisten mpris_positions :initial "{}"
 "scripts/positions.sh")
 
+; Indicator microphone privacy indicator
+(deflisten mic-used :interval "0s" :initial false
+"scripts/micpriv.sh")
+
+; Indicator - screen is shared
+(deflisten screen-share :interval "0s" :initial false 
+"scripts/screenpriv.sh")
+
 ; Indicator - Recording
 (defpoll recording :interval "1s"
 "pgrep 'wf-recorder' || echo false")
+
+; Keyboard Layout
+(defpoll kblayout :interval "1s" :initial ""
+"hyprctl devices -j | jq -r '.keyboards[] | select(.main == true) | .layout' | tr '[:lower:]' '[:upper:]'")
+; "hyprctl devices -j | jq -r '.keyboards[] | select(.main == true) | .layout + \"-\" + .variant' | tr '[:lower:]' '[:upper:]'")

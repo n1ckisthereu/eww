@@ -1,6 +1,6 @@
 .indicator {
-  background-color: rgba($background, 0.3);
-  //background-color: $color2;
+  background-color: rgba($background, 0.4);
+  //background-color: $color10;
   border-radius: $default-border-radius;
   padding: $padding-block;
   box-shadow: $box-shadow;
@@ -14,7 +14,7 @@
   }
 
   &:hover {
-    background-color: rgba($color2, $alpha: 0.5);
+    background-color: rgba($color10, $alpha: 0.5);
     transition: background 0.2s ease-out;
   }
 }
@@ -25,5 +25,5 @@
 }
 
 .control-active {
-  background-color: rgba($color2, $alpha: 0.5);
+  background-color: rgba($color10, $alpha: 0.5);
 }
